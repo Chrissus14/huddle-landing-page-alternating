@@ -71,11 +71,11 @@ body {
   width: 95%;
   padding: 1rem 0;
 }
-.header__mockup {
-  width: 100%;
-  height: auto;
-}
-@media (min-width: 376px){
+  /* .header__mockup {
+    width: 100%;
+    height: auto;
+  } */
+@media (min-width: 400px){
   .header {
     background-image: url('../images/bg-hero-desktop.svg');
   }
@@ -100,5 +100,76 @@ body {
     width: 95%;
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+}
+.main {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2rem;
+  justify-content: center;
+}
+.card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2rem 0;
+}
+img {
+  width: 100%;
+}
+.card__content {
+  width: 59%;
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.5;
+}
+.card__content__h2{
+  margin-bottom: 1rem;
+  color: var(--veryDarkCyan)
+}
+.card__content__p {
+  color: var(--grayishBlue);
+}
+.card__img {
+  width: 40%;
+  height: 400px;
+  background-image: url('../images/illustration-grow-together.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.card__img--flow {
+  background-image: url('../images/illustration-flowing-conversation.svg');
+}
+.card__img--users {
+  background-image: url('../images/illustration-your-users.svg');
+}
+.card:nth-child(2) > .card__content {
+  order: 1
+}
+ 
+@media (max-width: 378px){
+  .card {
+    padding: 0.2rem;
+  }
+ 
+  .card__img {
+    width: 100%;
+  }
+  .card__content {
+    width: 100%;
+    padding: 1rem;
+    order: 1;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 1rem;
+  }
+  .card__img{
+    height: 300px;
+    background-position: center;
   }
 }
