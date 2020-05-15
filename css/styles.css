@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+/* 
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Poppins', sans-serif; */
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --veryPaleCyan: hsl(193, 100%, 96%);
+  --veryDarkCyan: hsl(192, 100%, 9%);
+  --grayishBlue: hsl(208, 11%, 55%);
+  font-size: 18px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.header {
+  padding: 1rem 1rem;
+  background-color: var(--veryPaleCyan);
+  background-image: url('../images/bg-hero-mobile.svg');
+  background-repeat: repeat;
+  background-position:top;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+.nav__img {
+  width: 100px;
+  height: 20px;
+}
+.button {
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.3rem 1.5rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: var(--veryDarkCyan);
+  border-radius: 10rem;
+  box-shadow: 1px 2px #ecf0f1;
+}
+.button--primary {
+  background-color: var(--pink);
+  color: var(--veryPaleCyan);
+  padding: 0.4rem 1.5rem;
+}
+.started {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.5;
+  padding: 2rem 0;
+}
+.started__title {
+  margin-bottom: 2rem;
+  color: var(--veryDarkCyan);
+}
+.started__text{
+  margin-bottom: 2rem;
+  color: var(--veryDarkCyan);
+}
+.header__img {
+  width: 95%;
+  padding: 1rem 0;
+}
+.header__mockup {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 376px){
+  .header {
+    background-image: url('../images/bg-hero-desktop.svg');
+  }
+  .header__content {
+    display: flex;
+  }
+  .nav {
+    padding: 0 2rem;
+  }
+  .started {
+    flex: 1 1 800px;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  .button--primary {
+    display: inline-block;
+    width: 75%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+  .header__img {
+    width: 95%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
